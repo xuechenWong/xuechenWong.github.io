@@ -3,17 +3,48 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xuechen wang&#39;s blog</title>
+  <title>CSS3 border 属性详解 | xuechen wang&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A journey of a thousand miles begins with a single step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xuechen wang's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="CSS3中border属性有几个非常重要的子属性，本文来逐步说明。
+border-imageCSS3中可以通过border-image来设置边框的背景图片，同时还有几个相关的子属性来配合使用。
+属性列表：
+
+border-image-source:用在边框的图片路径
+
+border-image-slice:图片边框向内偏移量
+
+border-image-width:图片边框的宽度
+
+border-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3 border 属性详解">
+<meta property="og:url" content="http://yoursite.com/2016/01/11/css3-border/index.html">
 <meta property="og:site_name" content="xuechen wang's blog">
-<meta property="og:description" content="A journey of a thousand miles begins with a single step">
+<meta property="og:description" content="CSS3中border属性有几个非常重要的子属性，本文来逐步说明。
+border-imageCSS3中可以通过border-image来设置边框的背景图片，同时还有几个相关的子属性来配合使用。
+属性列表：
+
+border-image-source:用在边框的图片路径
+
+border-image-slice:图片边框向内偏移量
+
+border-image-width:图片边框的宽度
+
+border-">
+<meta property="og:updated_time" content="2016-01-11T06:15:22.688Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xuechen wang's blog">
-<meta name="twitter:description" content="A journey of a thousand miles begins with a single step">
+<meta name="twitter:title" content="CSS3 border 属性详解">
+<meta name="twitter:description" content="CSS3中border属性有几个非常重要的子属性，本文来逐步说明。
+border-imageCSS3中可以通过border-image来设置边框的背景图片，同时还有几个相关的子属性来配合使用。
+属性列表：
+
+border-image-source:用在边框的图片路径
+
+border-image-slice:图片边框向内偏移量
+
+border-image-width:图片边框的宽度
+
+border-">
   
     <link rel="alternative" href="/atom.xml" title="xuechen wang&#39;s blog" type="application/atom+xml">
   
@@ -63,9 +94,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-css3-border" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css3-border" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/11/css3-border/" class="article-date">
   <time datetime="2016-01-11T03:12:54.000Z" itemprop="datePublished">2016-01-11</time>
@@ -78,8 +107,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/11/css3-border/">CSS3 border 属性详解</a>
+    <h1 class="article-title" itemprop="name">
+      CSS3 border 属性详解
     </h1>
   
 
@@ -126,96 +155,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/08/my-new-post/" class="article-date">
-  <time datetime="2016-01-08T01:44:13.000Z" itemprop="datePublished">2016-01-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/my-new-post/">CSS3 background 属性详解</a>
-    </h1>
+    <a href="/2016/01/08/my-new-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS3 background 属性详解</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CSS3中对background属性做了一些修改，本文将对这些修改做进一步的说明。</p>
-<h2 id="u591A_u80CC_u666F_u56FE_u7247"><a href="#u591A_u80CC_u666F_u56FE_u7247" class="headerlink" title="多背景图片"></a>多背景图片</h2><p>css3之前的background只能设置一张背景图片，本次css3将background的背景图片修改成可以使用多图片当背景.<br>    <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>:<span class="function"><span class="title">url</span><span class="params">(<span class="string">'left.jpg'</span>)</span></span>,<span class="function"><span class="title">url</span><span class="params">(<span class="string">'right.jpg'</span>)</span></span>,<span class="function"><span class="title">url</span><span class="params">(<span class="string">'right.jpg'</span>)</span></span></span><br></pre></td></tr></table></figure></p>
-<p>background-image有几种可能的取值，默认值是none。</p>
-<p>取值：</p>
-<ul>
-<li><p><code>none</code>:无背景图</p>
-</li>
-<li><p><code>url</code>:使用绝对或相对地址指定背景图像 </p>
-</li>
-<li><p><code>linear-gradient</code>:使用线性渐变创建背景图像(CSS3新增) </p>
-</li>
-<li><p><code>radial-gradient</code>:使用径向(放射性)渐变创建背景图片(CSS3新增) </p>
-</li>
-<li><p><code>repeating-linear-gradient</code>:使用重复的线性渐变创建背景图片(CSS3新增) </p>
-</li>
-<li><p><code>repeating-radial-gradient</code>:使用重复的径向(放射性)渐变创建背景图片(CSS3新增) </p>
-</li>
-</ul>
-<h2 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h2><p>这个origin属性需要结合<code>background-position</code>一起使用，默认情况下，<code>background-position</code>是指背景图片铺开时是从content区域的左上角开始，而这个<code>background-origin</code>就规定了<code>background-position</code>从<code>border</code>、<code>padding</code>、<code>content</code>中的哪个开始。</p>
-<p>取值：</p>
-<ul>
-<li><p><code>padding</code>:背景图像相对于内边距框来定位，默认值也是<code>padding</code>.</p>
-</li>
-<li><p><code>border</code>:背景图像相对于边框盒来定位</p>
-</li>
-<li><p><code>content</code>:背景图片相对于内容框来定位</p>
-</li>
-</ul>
-<p><strong> 注意 </strong> : 如果设置了<code>background-attached:fixed</code>，则<code>background-origin</code>属性无效。</p>
-<h2 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h2><p>此属性规定背景的裁剪区域，默认值也是有<code>padding</code>、<code>border</code>、<code>content-box</code>.<br>不同于<code>background-origin</code>,<code>background-clip</code>的默认值为<code>border</code>,也就是背景默认从边框盒开始裁剪。</p>
-<p><code>background-clip</code>和<code>background-origin</code>的区别：</p>
-<p>前者是规定背景从哪个地方开始裁剪，后者是规定背景从哪里开始绘制，也就是背景绘制时的参照点，因为<code>background-position</code>属性的值经常会是<code>10px 20px</code>这种，这里的<code>10px</code>,<code>20px</code>就必然会需要一个参照物，添加背景时先根据<code>background-origin</code>规定的区域做为参照物绘制，绘制完毕后根据<code>background-clip</code>的值来相应的裁剪。</p>
-<h2 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h2><p>此属性规定背景图片的大小，可能取值为：</p>
-<ul>
-<li><p><code>length</code>:设置背景图像的宽度和高度，第一个值为宽度，第二个值为高度，如果第二个不填，默认为<code>auto</code></p>
-</li>
-<li><p><code>percentage</code>:以父元素百分比来设置背景图像的宽度和高度，第一个为宽度，第二个为高度，如果第二个不填，默认值为<code>auto</code></p>
-</li>
-<li><p><code>cover</code>:把背景图像扩展至足够大，以使背景图片完全覆盖背景区域，** </p>
-<p>背景图像的某些部分可能无法显示在背景定位区域中，因为图像被放大了。**</p>
-</li>
-<li><p><code>contain</code>:把背景图片扩展至最大尺寸，以使其宽度和高度完全适应内容区域。背景图片扩展至最大尺寸后，如仍未完全适应内容区域的话，多出的部分会留白。</p>
-</li>
-</ul>
-<h2 id="Multiple_backgrounds"><a href="#Multiple_backgrounds" class="headerlink" title="Multiple backgrounds"></a>Multiple backgrounds</h2><p>可以将<code>background</code>的各个子属性集中写在<code>background</code>中，默认的顺序为：</p>
-<p> <code>background: background-image background-origin background-clip background-repeat background-size background-position</code></p>
-<p> 多重背景图像时，用逗号,隔开，例子如下：</p>
- <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background:url(image/multiple-backgrounds.png) left top <span class="keyword">no</span>-<span class="keyword">repeat</span>,url(img/multiple-backgrounds.png) -<span class="number">320</span>px bottom <span class="keyword">no</span>-<span class="keyword">repeat</span>, url(img/multiple-backgrounds.png) -<span class="number">640</span>px top <span class="keyword">repeat</span>-y;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/08/my-new-post/" data-id="cij9kugic000040no2yx3izwc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">

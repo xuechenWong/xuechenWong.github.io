@@ -114,11 +114,41 @@
 <pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius: <span class="number">25</span>px <span class="number">25</span>px <span class="number">10</span>px <span class="number">20</span>px / <span class="number">25</span>px <span class="number">25</span>px <span class="number">10</span>px <span class="number">20</span>px;</span><br></pre></td></tr></table></figure>
 </code></pre><p>此种写法等价于：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">border-top-left-radius:<span class="number">25</span>px <span class="number">25</span>px;</span><br><span class="line">border-top-right-radius:<span class="number">25</span>px <span class="number">25</span>px;</span><br><span class="line">border-bottom-right-radius:<span class="number">10</span>px <span class="number">10</span>px;</span><br><span class="line">border-bottom-left-radius:<span class="number">20</span>px <span class="number">20</span>px;</span><br></pre></td></tr></table></figure></p>
 <p>如果<code>border-radius</code>采用水平半径和垂直半径分开的写法：</p>
-<h1 id="u53EA_u5199_u4E86_u4E24_u4E2A_u503C_uFF1A_u5219top-left_u548Cbottom-right_u5171_u7528_u524D_u4E00_u4E2A_u503C_uFF0Ctop-right_u548Cbottom-left_u5171_u7528_u540E_u4E00_u4E2A_u503C"><a href="#u53EA_u5199_u4E86_u4E24_u4E2A_u503C_uFF1A_u5219top-left_u548Cbottom-right_u5171_u7528_u524D_u4E00_u4E2A_u503C_uFF0Ctop-right_u548Cbottom-left_u5171_u7528_u540E_u4E00_u4E2A_u503C" class="headerlink" title="只写了两个值：则top-left和bottom-right共用前一个值，top-right和bottom-left共用后一个值"></a>只写了两个值：则top-left和bottom-right共用前一个值，top-right和bottom-left共用后一个值</h1><h1 id="u53EA_u5199_u4E86_u4E09_u4E2A_u503C_uFF1A_u5219top-left_u548Cbottom-right_u5206_u522B_u91C7_u7528_u7B2C_u4E00_u4E2A_u548C_u6700_u540E_u4E00_u4E2A_u503C_uFF0C_u4E2D_u95F4_u7684_u503C_u7531top-right_u548Cbottom-left_u5171_u7528"><a href="#u53EA_u5199_u4E86_u4E09_u4E2A_u503C_uFF1A_u5219top-left_u548Cbottom-right_u5206_u522B_u91C7_u7528_u7B2C_u4E00_u4E2A_u548C_u6700_u540E_u4E00_u4E2A_u503C_uFF0C_u4E2D_u95F4_u7684_u503C_u7531top-right_u548Cbottom-left_u5171_u7528" class="headerlink" title="只写了三个值：则top-left和bottom-right分别采用第一个和最后一个值，中间的值由top-right和bottom-left共用"></a>只写了三个值：则top-left和bottom-right分别采用第一个和最后一个值，中间的值由top-right和bottom-left共用</h1><h1 id="u53EA_u5199_u4E86_u4E00_u4E2A_u503C_uFF1A_u5219_u56DB_u4E2A_u89D2_u5171_u7528__u4E00_u4E2A_u503C"><a href="#u53EA_u5199_u4E86_u4E00_u4E2A_u503C_uFF1A_u5219_u56DB_u4E2A_u89D2_u5171_u7528__u4E00_u4E2A_u503C" class="headerlink" title="只写了一个值：则四个角共用 一个值"></a>只写了一个值：则四个角共用 一个值</h1><h1 id="u5199_u4E86_u56DB_u4E2A_u503C_uFF0C_u5219_u56DB_u4E2A_u89D2_u6309_u7167top-left_u3001top-right_u3001bottom-right_u3001bottom-left_u7684_u987A_u5E8F_u53D6_u503C"><a href="#u5199_u4E86_u56DB_u4E2A_u503C_uFF0C_u5219_u56DB_u4E2A_u89D2_u6309_u7167top-left_u3001top-right_u3001bottom-right_u3001bottom-left_u7684_u987A_u5E8F_u53D6_u503C" class="headerlink" title="写了四个值，则四个角按照top-left、top-right、bottom-right、bottom-left的顺序取值"></a>写了四个值，则四个角按照top-left、top-right、bottom-right、bottom-left的顺序取值</h1>
+<ul>
+<li><p>只写了两个值：则top-left和bottom-right共用前一个值，top-right和bottom-left共用后一个值</p>
+</li>
+<li><p>只写了三个值：则top-left和bottom-right分别采用第一个和最后一个值，中间的值由top-right和bottom-left共用</p>
+</li>
+<li><p>只写了一个值：则四个角共用 一个值</p>
+</li>
+<li><p>写了四个值，则四个角按照top-left、top-right、bottom-right、bottom-left的顺序取值</p>
+</li>
+</ul>
+<h2 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h2><p><code>box-shadow</code>用来向边框添加一个或多个阴影。</p>
+<p>语法如下：<br><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
+<p><strong> 注释 </strong> : box-shadow 向框添加一个或多个阴影。该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。省略长度的值是 0。</p>
+<p>解释：</p>
+<ul>
+<li><p><code>h-shadow</code>: 必需。水平阴影的位置，允许负值。</p>
+</li>
+<li><p><code>v-shadow</code>: 必需。垂直阴影的位置，允许负值。</p>
+</li>
+<li><p><code>blur</code>: 可选。模糊距离。</p>
+</li>
+<li><p><code>spread</code>: 可选。阴影的尺寸。</p>
+</li>
+<li><p><code>color</code>: 可选。阴影的颜色。</p>
+</li>
+<li><p><code>inset</code>: 可选。将外部阴影(outset)改为内部阴影。</p>
+</li>
+</ul>
+<p>常见写法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:<span class="number">10</span>px <span class="number">10</span>px <span class="number">10</span>px <span class="preprocessor">#aaaaaa;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/11/css3-border/" data-id="cij9kugio000340notw2kdkl9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/11/css3-border/" data-id="cij9lipw40003w8nozg0c3dcd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li></ul>
@@ -203,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/08/my-new-post/" data-id="cij9kugic000040no2yx3izwc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/08/my-new-post/" data-id="cij9lipvr0000w8no0u4e1pkj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li></ul>
